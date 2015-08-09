@@ -114,7 +114,7 @@ console.log("Mean response time = "+requesttime3.reduce(function(sum, a) { retur
 console.log("Median = "+module.median(requesttime3)+"ms");
 console.log("Mode = "+module.find_mode(requesttime3)+"ms");
 console.log("Most Responsive Dyno ");
-module.find_mode(dynos2).forEach(function(e){
+module.find_mode(dynos3).forEach(function(e){
 console.log("Dyno:: web."+e);
 });
 
@@ -132,7 +132,7 @@ console.log("Mode = "+module.find_mode(requesttime4)+"ms");
 
 console.log("Most Responsive Dyno ");
 
-module.find_mode(dynos2).forEach(function(e){
+module.find_mode(dynos4).forEach(function(e){
 console.log("Dyno:: web."+e);
 });
 
@@ -148,7 +148,7 @@ console.log("Mean response time = "+requesttime5.reduce(function(sum, a) { retur
 console.log("Median = "+module.median(requesttime5)+"ms");
 console.log("Mode = "+module.find_mode(requesttime5)+"ms");
 console.log("Most Responsive Dyno ");
-module.find_mode(dynos2).forEach(function(e){
+module.find_mode(dynos5).forEach(function(e){
 console.log("Dyno:: web."+e);
 });
 
@@ -163,7 +163,7 @@ console.log("Mean response time = "+requesttime6.reduce(function(sum, a) { retur
 console.log("Median = "+module.median(requesttime6)+"ms");
 console.log("Mode = "+module.find_mode(requesttime6)+"ms");
 console.log("Most Responsive Dyno ");
-module.find_mode(dynos2).forEach(function(e){
+module.find_mode(dynos6).forEach(function(e){
 console.log("Dyno:: web."+e);
 });
 }
@@ -177,7 +177,7 @@ console.log("Mean response time = "+requesttime7.reduce(function(sum, a) { retur
 console.log("Median = "+module.median(requesttime7)+"ms");
 console.log("Mode = "+module.find_mode(requesttime7)+"ms");
 console.log("Most Responsive Dyno ");
-module.find_mode(dynos2).forEach(function(e){
+module.find_mode(dynos7).forEach(function(e){
 console.log("Dyno:: web."+e);
 });
 }else{
