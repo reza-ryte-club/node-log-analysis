@@ -47,12 +47,29 @@ describe('mode test',function(){
 
 
 
-describe('Parsing test',function(){
-  it('check mode value',function(){
-    
+describe('Testing dyno retrieval',function(){
+  it('check the dynos',function(){
+    var count = 2;
+    var arr = [" dyno=web.8 ","dyno=web.8"];
+    var arr2 = [" dyno=web.8 ","dyno=web.1","dyno=web.12"];  
+    var dynos = [];
+    assert.deepEqual([8,8],module.getDynos(2,arr,dynos));
+    dynos = [];
+    assert.deepEqual([8,1,12],module.getDynos(3,arr2,dynos));
   });
+});
 
 
+describe('Testing Request Time retrieval',function(){
+  it('check request time',function(){
+    var count = 2;
+    var arr = [" connect=12ms service=21ms ","connect=8ms service=16ms "];
+    var arr2 = [" connect=32ms service=41ms ","connect=131ms service=234ms ","connect=192ms service=211ms "];  
+    var rtimes = [];
+    assert.deepEqual([33,24],module.getRequestTimes(2,arr,rtimes));
+    rtimes = [];
+    assert.deepEqual([73,365,403],module.getRequestTimes(3,arr2,rtimes));
+  });
 });
 
 

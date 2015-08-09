@@ -11,7 +11,22 @@ exports.median = function(values) {
 
 
 
-exports.parseInput = function(count,arr,dyno,rtime) {
+exports.getDynos = function(count,arr,dyno) {
+  for(var i=0;i<count;i++){
+     var dyno_id = arr[i].split('dyno=')[1];
+     var dPosition = dyno_id.indexOf(' ');
+         if(dPosition != -1) {
+           dyno_id = dyno_id.substring(0,dPosition);
+         }
+         dyno_id = dyno_id.replace(/\D/g,'');
+  
+      dyno.push(parseInt(dyno_id));
+      
+      }
+
+      return dyno;
+}
+exports.getRequestTimes = function(count,arr,rtime) {
   for(var i=0;i<count;i++){
      var s_id = arr[i].split('connect=')[1];
      var sPosition = s_id.indexOf(' ');
@@ -26,19 +41,11 @@ exports.parseInput = function(count,arr,dyno,rtime) {
            m_id = m_id.substring(0,mPosition);
          }
          m_id = m_id.replace(/\D/g,'');
-     
-     var dyno_id = arr[i].split('dyno=')[1];
-     var dPosition = dyno_id.indexOf(' ');
-         if(dPosition != -1) {
-           dyno_id = dyno_id.substring(0,dPosition);
-         }
-         dyno_id = dyno_id.replace(/\D/g,'');
-  
-      dyno.push(parseInt(dyno_id));
+    
       rtime.push(parseInt(s_id,10)+parseInt(m_id,10));
       }
 
-
+      return rtime;
 }
 
 

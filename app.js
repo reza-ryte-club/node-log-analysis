@@ -70,12 +70,26 @@ var dynos2 = [], dynos3 = [], dynos4 = [], dynos5 = [], dynos6 = [], dynos7 = []
 
 
 //get the job done
-module.parseInput(count2,arr2,dynos2,requesttime2);
-module.parseInput(count3,arr3,dynos3,requesttime3);
-module.parseInput(count4,arr4,dynos4,requesttime4);
-module.parseInput(count5,arr5,dynos5,requesttime5);
-module.parseInput(count6,arr6,dynos6,requesttime6);
-module.parseInput(count7,arr7,dynos7,requesttime7);
+module.getDynos(count2,arr2,dynos2);
+module.getRequestTimes(count2,arr2,requesttime2);
+
+
+module.getDynos(count3,arr3,dynos3);
+module.getRequestTimes(count3,arr3,requesttime3);
+
+module.getDynos(count4,arr4,dynos4);
+module.getRequestTimes(count4,arr4,requesttime4);
+
+module.getDynos(count5,arr5,dynos5);
+module.getRequestTimes(count5,arr5,requesttime5);
+
+module.getDynos(count6,arr6,dynos6);
+module.getRequestTimes(count6,arr6,requesttime6);
+
+module.getDynos(count7,arr7,dynos7);
+module.getRequestTimes(count7,arr7,requesttime7);
+
+
 
 
 console.log("\nGET /api/users/{user_id}/count_pending_messages");
